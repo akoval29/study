@@ -31,5 +31,19 @@
 
 // console.log(is || as || zz);
 
+let number0fFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+let personalMovieDB = {
+    count: number0fFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+let a = prompt("Один из последних просмотренных фильмов?", "");
+let b = prompt("На сколько оцените его (1-5)", "");
+let c = prompt("Один из последних просмотренных фильмов?", "");
+let d = prompt("На сколько оцените его (1-5)", "");
 
-
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB);
