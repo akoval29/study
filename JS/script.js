@@ -25,8 +25,11 @@
 // decr--
 // console.log(incr, decr);
     
-const is = false,
-      as = false,
-      zz = true;
+// const is = false,
+//       as = false,
+//       zz = false;
 
-console.log(is || as || zz);
+// console.log(is || as || zz);
+
+
+
