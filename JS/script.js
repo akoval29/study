@@ -111,65 +111,90 @@
 
 //  ПРАКТИКА 3
 
-let number0fFilms;
+// let number0fFilms;
 
-function start() {
-       while (number0fFilms == '' || number0fFilms == null || isNaN(number0fFilms)) {
-       number0fFilms= +prompt("Сколько фильмов вы уже посмотрели?", "");
-    }
+// function start() {
+//        while (number0fFilms == '' || number0fFilms == null || isNaN(number0fFilms)) {
+//        number0fFilms= +prompt("Сколько фильмов вы уже посмотрели?", "");
+//     }
+// }
+// start();
+
+// const personalMovieDB = {
+//     count: number0fFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// function rememberMyFilms () {
+//     for (let i=0; i<2; i++) {
+//         let a = prompt("Один из последних просмотренных фильмов?", "");
+//         let b = prompt("На сколько оцените его (1-5)", "");
+//         if (a != null && b !=null && a !="" && b != '' && a.length < 50) {
+//             personalMovieDB.movies[a] = b;
+//             console.log('done');            
+//         } else { 
+//             console.log('error');
+//             i++;
+//         }
+//     } 
+//   }
+// rememberMyFilms();
+
+// function detectPersonalLevel () {
+//     if (personalMovieDB.count < 10) {
+//         console.log ("Просмотрено мало фильмов");
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//         console.log ("Вы классический зритель");
+//     } else if (personalMovieDB.count >= 30) {
+//         console.log("Вы киноман");
+//     } else {
+//         console.log ("Произошла ошибка");
+//     }
+// }
+// detectPersonalLevel ();
+
+// function showMyDB () {
+//     if (personalMovieDB.privat == false) {
+//        console.log(personalMovieDB);
+//     }
+// }
+// showMyDB ();
+
+// function writeYourGenres () {
+//     for (let i=1; i<=3; i++) {
+//             personalMovieDB.genres[i-1] = prompt(`Ваш любимій жанр под номером ${i}`);
+//     } 
+// }
+
+// writeYourGenres();
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// Урок 16 call-back функции
+
+function LearnJS (langi, callback) {
+    console.log(`Действие номер 1: ${langi}`);
+    callback();
 }
-start();
 
-const personalMovieDB = {
-    count: number0fFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+LearnJS('Первое', function() {
+    console.log('второе действие');
+});
 
-function rememberMyFilms () {
-    for (let i=0; i<2; i++) {
-        let a = prompt("Один из последних просмотренных фильмов?", "");
-        let b = prompt("На сколько оцените его (1-5)", "");
-        if (a != null && b !=null && a !="" && b != '' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log('done');            
-        } else { 
-            console.log('error');
-            i++;
-        }
-    } 
-  }
-rememberMyFilms();
+//////////////////
 
-function detectPersonalLevel () {
-    if (personalMovieDB.count < 10) {
-        console.log ("Просмотрено мало фильмов");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log ("Вы классический зритель");
-    } else if (personalMovieDB.count >= 30) {
-        console.log("Вы киноман");
-    } else {
-        console.log ("Произошла ошибка");
-    }
-}
-detectPersonalLevel ();
-
-function showMyDB () {
-    if (personalMovieDB.privat == false) {
-       console.log(personalMovieDB);
-    }
-}
-showMyDB ();
-
-function writeYourGenres () {
-    for (let i=1; i<=3; i++) {
-            personalMovieDB.genres[i-1] = prompt(`Ваш любимій жанр под номером ${i}`);
-    } 
+function LearnJS (langi, langi2, callback) {
+    console.log(`Действие номер 1: ${langi}, ${langi2}`);
+    callback();
 }
 
-writeYourGenres();
+function done() {
+    console.log('Второе действие');
+}
 
+LearnJS('Первое', 'первое2', done);
 
-///////////////////
+////////////////////////////////////////////////////////////////////////////////////////
