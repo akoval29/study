@@ -1,61 +1,61 @@
 "use strict";
-// // let number = 1;
-// // console.log(number);
-// // number = 10,
-// // console.log(number);
+// let number = 1;
+// console.log(number);
+// number = 10,
+// console.log(number);
 
-// // {
-// //     var rez=5000;
-// // }
-// // console.log(rez);
+// {
+//     var rez=5000;
+// }
+// console.log(rez);
 
-// // console.log(4/0);
+// console.log(4/0);
 
-// // const result = confirm('are you here?');
-// // console.log(result);
+// const result = confirm('are you here?');
+// console.log(result);
 
-// // const answers = [];
-// // answers[0]=prompt("как ваше имя", '');
-// // answers[1]=prompt("your age?", '');
-// // answers[2]=prompt("your surname?", '');
-// // document.write(answers);
-// // let incr=10,
-// //     decr=10;
-// // incr++
-// // decr--
-// // console.log(incr, decr);
+// const answers = [];
+// answers[0]=prompt("как ваше имя", '');
+// answers[1]=prompt("your age?", '');
+// answers[2]=prompt("your surname?", '');
+// document.write(answers);
+// let incr=10,
+//     decr=10;
+// incr++
+// decr--
+// console.log(incr, decr);
     
-// // const is = false,
-// //       as = false,
-// //       zz = false;
+// const is = false,
+//       as = false,
+//       zz = false;
 
-// // console.log(is || as || zz);
-
-
+// console.log(is || as || zz);
 
 
-// // //  ПРАКТИКА 1
-
-// // let number0fFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
-// // let personalMovieDB = {
-// //     count: number0fFilms,
-// //     movies: {},
-// //     actors: {},
-// //     genres: [],
-// //     privat: false
-// // };
-// // let a = prompt("Один из последних просмотренных фильмов?", "");
-// // let b = prompt("На сколько оцените его (1-5)", "");
-// // let c = prompt("Один из последних просмотренных фильмов?", "");
-// // let d = prompt("На сколько оцените его (1-5)", "");
-
-// // personalMovieDB.movies[a] = b;
-// // personalMovieDB.movies[c] = d;
-
-// // console.log(personalMovieDB);
 
 
-// //  ПРАКТИКА 2
+// //  ПРАКТИКА 1
+
+// let number0fFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+// let personalMovieDB = {
+//     count: number0fFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+// let a = prompt("Один из последних просмотренных фильмов?", "");
+// let b = prompt("На сколько оцените его (1-5)", "");
+// let c = prompt("Один из последних просмотренных фильмов?", "");
+// let d = prompt("На сколько оцените его (1-5)", "");
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+// console.log(personalMovieDB);
+
+
+//  ПРАКТИКА 2
 
 // const number0fFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 // const personalMovieDB = {
@@ -85,18 +85,18 @@
 // aaa("hello");
 // console.log(num);
 
-// // const calcv1 = (a,b) => {return a+b};
+// const calcv1 = (a,b) => {return a+b};
 
 
 //  const qqq='Hello World';
 
-// // console.log(qqq.length);
-// // console.log(qqq.toUpperCase());
-// // console.log(qqq.indexOf('e'));
+// console.log(qqq.length);
+// console.log(qqq.toUpperCase());
+// console.log(qqq.indexOf('e'));
 
-// // const rrrr='12.5hello world';
-// // // console.log(rrrr.slice(-6));
-// // console.log(parseFloat(rrrr));
+// const rrrr='12.5hello world';
+// // console.log(rrrr.slice(-6));
+// console.log(parseFloat(rrrr));
 
 // console.log(qqq[0]);
 // console.log(qqq.slice(-3));
@@ -109,7 +109,7 @@
 
 
 
-//  ПРАКТИКА 3
+////////////////////////////////////  ПРАКТИКА 3 ///////////////////////////////////////////
 
 // let number0fFilms;
 
@@ -171,30 +171,60 @@
 
 // writeYourGenres();
 
-////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////// Урок 16 call-back функции //////////////////////////////////
 
-// Урок 16 call-back функции
+// function LearnJS (langi, callback) {
+//     console.log(`Действие номер 1: ${langi}`);
+//     callback();
+// }
 
-function LearnJS (langi, callback) {
-    console.log(`Действие номер 1: ${langi}`);
-    callback();
-}
+// LearnJS('Первое', function () {
+//     console.log('второе действие');   
+// });
 
-LearnJS('Первое', function() {
-    console.log('второе действие');
-});
+// //////////////////
 
-//////////////////
+// function LearnJS (langi, langi2, callback) {
+//     console.log(`Действие номер 1: ${langi}, ${langi2}`);
+//     callback();
+// }
 
-function LearnJS (langi, langi2, callback) {
-    console.log(`Действие номер 1: ${langi}, ${langi2}`);
-    callback();
-}
+// function done() {
+//     console.log('Второе действие');
+// }
 
-function done() {
-    console.log('Второе действие');
-}
+// LearnJS('Первое', 'первое2', done);
 
-LearnJS('Первое', 'первое2', done);
+// /////////////////////////////// запись в масив //////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////////////
+let a, b, c;
+let qqq = [a, b];
+
+qqq.a = 111;
+qqq.b = 'some text';
+
+qqq[0] = 555;
+
+console.log(qqq[0], qqq.a, qqq.b);
+
+console.log (typeof(qqq));
+console.log (typeof(qqq.a));
+console.log (typeof(qqq.b));
+
+////////////////////////////////запись в обьект ////////////////////////////////////////
+
+let boxes = '';
+let boxOfChocolate = +'';
+let boxOfCandies = +'';
+
+const werehouse = {
+    boxes: {boxOfChocolate, boxOfCandies}
+};
+
+werehouse.boxes.boxOfChocolate = 1;
+werehouse.boxes.boxOfCandies = 2;
+
+console.log (werehouse);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
