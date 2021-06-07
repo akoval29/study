@@ -197,34 +197,60 @@
 
 // /////////////////////////////// запись в масив //////////////////////////////////////
 
-let a, b, c;
-let qqq = [a, b];
+// let a, b, c;
+// let qqq = [a, b];
 
-qqq.a = 111;
-qqq.b = 'some text';
+// qqq.a = 111;
+// qqq.b = 'some text';
 
-qqq[0] = 555;
+// qqq[0] = 555;
 
-console.log(qqq[0], qqq.a, qqq.b);
+// console.log(qqq[0], qqq.a, qqq.b);
 
-console.log (typeof(qqq));
-console.log (typeof(qqq.a));
-console.log (typeof(qqq.b));
+// console.log (typeof(qqq));
+// console.log (typeof(qqq.a));
+// console.log (typeof(qqq.b));
 
-////////////////////////////////запись в обьект ////////////////////////////////////////
+// ////////////////////////////////запись в обьект ////////////////////////////////////////
 
-let boxes = '';
-let boxOfChocolate = +'';
-let boxOfCandies = +'';
+// let boxes = '';
+// let boxOfChocolate = +'';
+// let boxOfCandies = +'';
 
-const werehouse = {
-    boxes: {boxOfChocolate, boxOfCandies}
-};
+// const werehouse = {
+//     boxes: {boxOfChocolate, boxOfCandies}
+// };
 
-werehouse.boxes.boxOfChocolate = 1;
-werehouse.boxes.boxOfCandies = 2;
+// werehouse.boxes.boxOfChocolate = 1;
+// werehouse.boxes.boxOfCandies = 2;
 
-console.log (werehouse);
+// console.log (werehouse);
+// console.log (werehouse.boxes.boxOfChocolate);
+// console.log (werehouse['boxes']['boxOfChocolate']);
+// console.log (werehouse['boxes']['boxOfCandies']);
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
+};
+
+for (let key in options) {
+    if (typeof(options[key])==='object') {
+        for (let i in options[key]) {
+            console.log(`свойство ${i} имеет значение ${options[key][i]}`);
+        }    
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+    }
+}
+console.log(Object.keys(options).length);
+const {border, bg} = options.colors;
+console.log(border);
+console.log(bg);
