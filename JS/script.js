@@ -257,8 +257,18 @@
 
 /////1.22
 
-function hello () {
-    console.log(`Hello`);
-    debugger;
-}
-hello();
+// function hello () {
+//     console.log(`Hello`);
+//     debugger;
+// }
+// hello();
+
+/////1.24
+
+console.log ('Ёжик'>'яблуко');
+
+const a = [1,2,3],
+      b = [1,2,3];
+console.log(a==b);
+
+console.log(2 && 1 && null && 0 && undefined); //null
