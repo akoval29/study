@@ -265,10 +265,31 @@
 
 /////1.24
 
-console.log ('Ёжик'>'яблуко');
+// console.log ('Ёжик'>'яблуко');
+// const a = [1,2,3],
+//       b = [1,2,3];
+// console.log(a==b);
 
-const a = [1,2,3],
-      b = [1,2,3];
-console.log(a==b);
+// console.log(2 && 1 && null && 0 && undefined); //null
 
-console.log(2 && 1 && null && 0 && undefined); //null
+/////1.25
+
+const box = document.getElementById('box');
+console.log(box); 
+
+const btns = document.getElementsByTagName('button')[1];
+console.log(btns);
+// или
+const btns1 = document.getElementsByTagName('button');
+console.log(btns1[1]);
+
+const circles = document.getElementsByClassName('circle');
+console.log(circles);
+
+const hearts = document.querySelectorAll('.heart');
+hearts.forEach(item => {
+    console.log(item);
+});
+
+const oneHeart = document.querySelector('.heart');
+console.log(oneHeart);
