@@ -277,6 +277,9 @@
 const box = document.getElementById('box');
 console.log(box); 
 
+const box1 = document.getElementById('box1');
+console.log(box1); 
+
 const btns = document.getElementsByTagName('button')[1];
 console.log(btns);
 // или
@@ -291,5 +294,28 @@ hearts.forEach(item => {
     console.log(item);
 });
 
+
 const oneHeart = document.querySelector('.heart');
 console.log(oneHeart);
+
+console.dir(box1);
+
+box.style.backgroundColor = `aqua`;
+box.style.width = `444px`;
+//или
+box.style.cssText='background-color:blue; width:500px'; 
+
+box1.style.cssText='background-color:darkgrey'; 
+
+btns1[1].style.borderRadius = `100%`;
+circles[0].style.backgroundColor= 'red';
+
+//перебор
+for (let i=0; i<hearts.length; i++) {
+    hearts[i].style.backgroundColor='black';
+}
+
+//перебор 2
+hearts.forEach(item => {
+    item.style.backgroundColor = 'purple';
+});
