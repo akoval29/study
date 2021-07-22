@@ -275,10 +275,12 @@
 /////1.25
 
 const box = document.getElementById('box');
-console.log(box); 
 
 const box1 = document.getElementById('box1');
 console.log(box1); 
+
+const box2 = document.getElementById('box2');
+console.log(box2); 
 
 const btns = document.getElementsByTagName('button')[1];
 console.log(btns);
@@ -293,29 +295,34 @@ const hearts = document.querySelectorAll('.heart');
 hearts.forEach(item => {
     console.log(item);
 });
-
-
+const wrapper = document.querySelector('.wrapper');
 const oneHeart = document.querySelector('.heart');
-console.log(oneHeart);
 
+console.log(oneHeart);
 console.dir(box1);
 
-box.style.backgroundColor = `aqua`;
-box.style.width = `444px`;
-//или
-box.style.cssText='background-color:blue; width:500px'; 
-
+box.style.backgroundColor = `yellow`;
+box.style.width = `500px`;
 box1.style.cssText='background-color:darkgrey'; 
+box2.style.cssText='background-color:blue; width:500px; height:100px'; 
 
 btns1[1].style.borderRadius = `100%`;
 circles[0].style.backgroundColor= 'red';
 
-//перебор
-for (let i=0; i<hearts.length; i++) {
-    hearts[i].style.backgroundColor='black';
-}
-
-//перебор 2
+//перебор 
 hearts.forEach(item => {
     item.style.backgroundColor = 'purple';
 });
+
+//перебор 2
+for (let i=4; i<hearts.length; i++) {
+    hearts[i].style.backgroundColor='black';
+}
+
+//new div
+const div = document.createElement('div');
+div.classList.add('black');
+wrapper.prepend(div);
+div.style.cssText='background-color: green; width:550px; height:90px';
+div.innerHTML="Alloha!";
+
